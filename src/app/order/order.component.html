@@ -1,0 +1,13 @@
+<div class="col-md-6">
+<table class="table table-hover">
+<tr *ngFor="let item of products;let i=index">
+    <td>{{i}}</td>
+  <td>{{item.Make}}</td>
+  <td>{{item.Model}}</td>
+  <td>{{item.Price}}</td>
+  <td><button class="btn btn-primary" (click)="addToCart(item)">Add To Cart</button></td>
+</table>
+</div>
+<div class="col-md-6">
+<app-details [detail]="selectedProduct" (itemsCount)="addItemsCount($event)"></app-details>
+</div>

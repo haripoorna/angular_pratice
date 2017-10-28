@@ -1,0 +1,49 @@
+<div class="form-horizontal">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Email:</label>
+    <div class="col-sm-4">
+      <input type="email" class="form-control" id="email"
+[(ngModel)]="User.Email"
+      placeholder="Enter email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">User Name:</label>
+    <div class="col-sm-4">
+      <input type="email" class="form-control" 
+[(ngModel)]="User.UserName"
+      placeholder="Enter User Name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">Country:</label>
+    <div class="col-sm-4">
+     <select [(ngModel)]="User.country" class="form-control">
+       <option [value]="country.code" *ngFor="let country of Countries">{{country.name}}</option>
+     </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">Password:</label>
+    <div class="col-sm-4">
+      <input type="password"
+      [(ngModel)]="User.Password"
+      [readonly]="isReadOnly"
+      style="visibility:hidden"
+      class="form-control" id="pwd" placeholder="Enter password">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-4">
+      <div class="checkbox">
+        <label><input type="checkbox" [(ngModel)]="User.RememberStatus"
+> Remember me</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-4">
+      <button (click)="register()" class="btn btn-default">Submit</button>
+    </div>
+  </div>
+</div>

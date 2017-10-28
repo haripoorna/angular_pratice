@@ -1,0 +1,21 @@
+<div class="col-md-6">
+  <div class="row">
+  <div class="col-md-6">Name:{{detail.Make}}</div>
+</div>
+  <div class="row">
+  <div class="col-md-6">Model: {{detail.Model}}</div>
+</div>
+  <div class="row">
+  <div class="col-md-6">Price: </div>
+  <div class="col-md-6">
+    <input class="form-control" name="Price" [(ngModel)]="detail.Price">
+  </div>
+</div>  <div class="row">
+    <div class="col-md-6">Description: {{detail.Description}}</div></div>
+</div>
+<div class="row">
+   <div class="col-md-6">Number of items <input type="text" [(ngModel)]="numberOfItems">
+   </div>
+ </div>
+
+<button (click)="addTotalItems()" class="btn btn-primary">Add items</button>

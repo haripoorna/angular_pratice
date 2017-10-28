@@ -1,0 +1,42 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+   <a class="navbar-brand" href="#">{{BrandName}}</a>
+    </div>
+    <ul class="nav navbar-nav">
+    <!--  <li class="active" (click)="LoadPage('Home')"><a href="#">Home</a></li>
+      <li  (click)="LoadPage('Login')"><a href="#">Login</a></li>
+      <li  (click)="LoadPage('Register')"><a href="#">Register</a></li>-->
+    <!--  <li *ngFor="let item of Tabs" (click)="LoadPage(item)"><a href="#">{{item}}</a></li>-->
+    <li *ngFor="let item of Tabs" ><a [routerLink]="['/'+item.toLowerCase()]">{{item}}</a></li>
+
+    </ul>
+  </div>
+</nav>
+<div *ngFor="let item of values">
+  <h1>{{item|json}}</h1>
+</div>
+<div>
+  <h1>{{anyErrors}}</h1>
+</div>
+
+<!--<div *ngIf="PageName =='Home'">
+  <app-home></app-home>
+</div>-->
+
+<!--<div *ngIf="PageName =='Register'">
+  <app-register></app-register>
+</div>
+
+
+<div *ngIf="PageName =='Login'">
+  <app-login></app-login>
+</div>
+
+<div *ngIf="PageName =='Products'">
+  <app-order></app-order>
+</div>
+
+<div *ngIf="PageName =='Cart'">
+  <app-cart></app-cart>
+</div>-->
